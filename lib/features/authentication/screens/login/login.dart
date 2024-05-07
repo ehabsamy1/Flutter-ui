@@ -4,9 +4,9 @@ import 'package:storeapp/features/authentication/screens/login/widgets/login_for
 import 'package:storeapp/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:storeapp/utils/constants/text_strings.dart';
 import '../../../../common/styles/spacing_styles.dart';
+import '../../../../common/widgets/from_divider.dart';
+import '../../../../common/widgets/social_buttons.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../../common/widgets_login_signup/from_divider.dart';
-import '../../../../common/widgets_login_signup/social_buttons.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:storeapp/common/widgets_login_signup/images/t_rounded_image.dart';
-import 'package:storeapp/common/widgets_login_signup/productscart/product_card/product_price.dart';
+import 'package:storeapp/common/widgets/productscart/product_card/product_price.dart';
 import 'package:storeapp/utils/constants/colors.dart';
 import 'package:storeapp/utils/constants/image_strings.dart';
 import 'package:storeapp/utils/constants/sizes.dart';
@@ -10,6 +9,7 @@ import 'package:storeapp/utils/helpers/helper_functions.dart';
 import '../../../custom_shapes/containers/rounded_container.dart';
 import '../../../styles/shadows.dart';
 import '../../icons/t_circlar_icon.dart';
+import '../../images/t_rounded_image.dart';
 import '../../texts/product_title_text.dart';
 import '../../texts/t_beand_title_text_with_verified_icon.dart';
 

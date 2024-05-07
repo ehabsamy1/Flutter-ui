@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/common/widgets_login_signup/productscart/product_card/product_card_vertical.dart';
 import 'package:storeapp/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:storeapp/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:storeapp/features/shop/screens/home/widgets/promo_slider.dart';
@@ -7,8 +6,9 @@ import 'package:storeapp/utils/constants/image_strings.dart';
 import 'package:storeapp/utils/constants/sizes.dart';
 import '../../../../common/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets_login_signup/layouts/grid_layout.dart';
-import '../../../../common/widgets_login_signup/texts/section_heading.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/productscart/product_card/product_card_vertical.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -53,10 +53,11 @@ class HomeScreen extends StatelessWidget {
 
                         /// -- Categories
                         THomeCategories(),
-                         SizedBox(height: TSizes.spaceBtwSections,),
+
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(height: TSizes.spaceBtwSections,),
                 ],
               ),
             ),

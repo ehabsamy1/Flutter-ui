@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/common/widgets_login_signup/productscart/product_card/prand_card.dart';
-
+import 'package:storeapp/common/widgets/productscart/product_card/prand_card.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';

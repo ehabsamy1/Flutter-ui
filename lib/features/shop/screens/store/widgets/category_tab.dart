@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/common/widgets_login_signup/layouts/grid_layout.dart';
-import 'package:storeapp/common/widgets_login_signup/productscart/product_card/product_card_vertical.dart';
-import 'package:storeapp/common/widgets_login_signup/texts/section_heading.dart';
 
-import '../../../../../common/widgets_login_signup/productscart/product_card/brand_dhow_case.dart';
+import '../../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../../common/widgets/productscart/product_card/brand_dhow_case.dart';
+import '../../../../../common/widgets/productscart/product_card/product_card_vertical.dart';
+import '../../../../../common/widgets/texts/section_heading.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 

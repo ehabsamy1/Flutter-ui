@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../common/widgets_login_signup/appbar/appnar.dart';
-import '../../../../../common/widgets_login_signup/productscart/cart_menu_icon.dart';
+import '../../../../../common/widgets/appbar/appnar.dart';
+import '../../../../../common/widgets/productscart/cart_menu_icon.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 

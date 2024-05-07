@@ -5,7 +5,7 @@ import 'package:storeapp/features/shop/controllers/home_controller.dart';
 import 'package:storeapp/utils/constants/colors.dart';
 
 import '../../../../../common/custom_shapes/containers/circular_container.dart';
-import '../../../../../common/widgets_login_signup/images/t_rounded_image.dart';
+import '../../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 

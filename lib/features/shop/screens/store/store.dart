@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:storeapp/common/custom_shapes/containers/search_container.dart';
-import 'package:storeapp/common/widgets_login_signup/appbar/appnar.dart';
-import 'package:storeapp/common/widgets_login_signup/appbar/tabbar.dart';
-import 'package:storeapp/common/widgets_login_signup/layouts/grid_layout.dart';
-import 'package:storeapp/common/widgets_login_signup/productscart/cart_menu_icon.dart';
-import 'package:storeapp/common/widgets_login_signup/texts/section_heading.dart';
 import 'package:storeapp/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:storeapp/utils/constants/colors.dart';
 import 'package:storeapp/utils/constants/sizes.dart';
 import 'package:storeapp/utils/helpers/helper_functions.dart';
-import '../../../../common/widgets_login_signup/productscart/product_card/prand_card.dart';
+import '../../../../common/widgets/appbar/appnar.dart';
+import '../../../../common/widgets/appbar/tabbar.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/productscart/cart_menu_icon.dart';
+import '../../../../common/widgets/productscart/product_card/prand_card.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
