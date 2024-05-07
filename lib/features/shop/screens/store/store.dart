@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/common/custom_shapes/containers/rounded_container.dart';
 import 'package:storeapp/common/custom_shapes/containers/search_container.dart';
 import 'package:storeapp/common/widgets_login_signup/appbar/appnar.dart';
 import 'package:storeapp/common/widgets_login_signup/appbar/tabbar.dart';
 import 'package:storeapp/common/widgets_login_signup/layouts/grid_layout.dart';
 import 'package:storeapp/common/widgets_login_signup/productscart/cart_menu_icon.dart';
 import 'package:storeapp/common/widgets_login_signup/texts/section_heading.dart';
+import 'package:storeapp/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:storeapp/utils/constants/colors.dart';
 import 'package:storeapp/utils/constants/sizes.dart';
 import 'package:storeapp/utils/helpers/helper_functions.dart';
@@ -85,30 +85,18 @@ class StoreScreen extends StatelessWidget {
                 ),
               ];
             },
-            body: const TabBarView(
+            body:  const TabBarView(
               children: [
-              Padding(padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: Column(
-                children: [
-                  /// Brands
-                  TRoundedContainer(
-                    showBorder: true,
-                    borderColor: TColors.darkGrey,
-                    backgroundColor: Colors.transparent,
-                    margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                    child: Column(children: [
-                      /// products
-                      TBrandCard(showBorder: true,),
-                    ],),
-                  ),
-
-                ],
-              ),
-              ),
-
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
             ],)),
       ),
     );
   }
 }
+
+
 
