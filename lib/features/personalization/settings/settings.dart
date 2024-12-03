@@ -9,6 +9,7 @@ import 'package:storeapp/utils/constants/sizes.dart';
 
 import '../../../common/widgets/appbar/appnar.dart';
 import '../../../common/widgets/list_tiles/user_profile_tile.dart';
+import '../screens/address/address.dart';
 import '../screens/profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -20,92 +21,118 @@ class SettingsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
             /// Header
             TPrimaryHeaderContainer(
                 child: Column(
-                  children: [
-                    TAppBar(
-                        title: Text(
-                          'Account',
-                          style: Theme
-                              .of(context)
-                              .textTheme
-                              .headlineMedium!
-                              .apply(color: TColors.white),
-                        )),
-
-                    /// User Profile card
-                     TUserProfileTitle(onPressed: () => Get.to(() => const ProfileScreen())),
-                    const SizedBox(
-                      height: TSizes.spaceBtwSections,
-                    ),
-                  ],
+              children: [
+                TAppBar(
+                    title: Text(
+                  'Account',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium!
+                      .apply(color: TColors.white),
                 )),
 
+                /// User Profile card
+                TUserProfileTitle(
+                    onPressed: () => Get.to(() => const ProfileScreen())),
+                const SizedBox(
+                  height: TSizes.spaceBtwSections,
+                ),
+              ],
+            )),
+
             /// Body
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-
                   ///Account Settings
                   const TSectionHeading(
-                    title: 'Account Setting', showActionButton: false,),
+                    title: 'Account Setting',
+                    showActionButton: false,
+                  ),
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  const TSettingsMenuTile(icon: Iconsax.safe_home,
+                   TSettingsMenuTile(
+                      icon: Iconsax.safe_home,
                       title: 'My Addresses',
-                      subTitle: 'Set shopping delivery address'),
-                  const TSettingsMenuTile(icon: Iconsax.shopping_cart,
+                      subTitle: 'Set shopping delivery address' ,onTap: ()  => Get.to(() => const UserAddressScreen()),),
+
+                  const TSettingsMenuTile(
+                      icon: Iconsax.shopping_cart,
                       title: 'My Cart',
                       subTitle: 'Add, remove products and move to checkout'),
-                  const TSettingsMenuTile(icon: Iconsax.bag_tick,
+                  const TSettingsMenuTile(
+                      icon: Iconsax.bag_tick,
                       title: 'My Orders',
                       subTitle: 'In-progress and Completed Orders'),
-                  const TSettingsMenuTile(icon: Iconsax.bank,
+                  const TSettingsMenuTile(
+                      icon: Iconsax.bank,
                       title: 'Bank Account',
                       subTitle: 'Withdraw balance to registered bank account'),
-                  const TSettingsMenuTile(icon: Iconsax.discount_shape,
+                  const TSettingsMenuTile(
+                      icon: Iconsax.discount_shape,
                       title: 'My Coupons',
                       subTitle: 'List of all the discounted coupons'),
-                  const TSettingsMenuTile(icon: Iconsax.notification,
+                  const TSettingsMenuTile(
+                      icon: Iconsax.notification,
                       title: 'Notifications',
                       subTitle: 'Set any kind of notification'),
-                  const TSettingsMenuTile(icon: Iconsax.security_card,
+                  const TSettingsMenuTile(
+                      icon: Iconsax.security_card,
                       title: 'Account Privacy',
                       subTitle: 'Manage data usage and connected accounts'),
 
                   ///App Settings
-                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
                   const TSectionHeading(
-                    title: 'App Settings', showActionButton: false,),
-                  const SizedBox(height: TSizes.spaceBtwItems,),
-                  const TSettingsMenuTile(icon: Iconsax.document_upload,
+                    title: 'App Settings',
+                    showActionButton: false,
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  const TSettingsMenuTile(
+                      icon: Iconsax.document_upload,
                       title: 'Load Data',
                       subTitle: 'Upload Data to your Cloud Firebase'),
 
-
-                  TSettingsMenuTile(icon: Iconsax.location,
-                      title: 'Geolocation',
-                      subTitle: 'Set recommendation based on location',
+                  TSettingsMenuTile(
+                    icon: Iconsax.location,
+                    title: 'Geolocation',
+                    subTitle: 'Set recommendation based on location',
                     trailing: Switch(value: true, onChanged: (value) {}),
                   ),
-                  TSettingsMenuTile(icon: Iconsax.security_user,
-                      title: 'Safe Mode',
-                      subTitle: 'Search result is safe for all ages',
+                  TSettingsMenuTile(
+                    icon: Iconsax.security_user,
+                    title: 'Safe Mode',
+                    subTitle: 'Search result is safe for all ages',
                     trailing: Switch(value: false, onChanged: (value) {}),
                   ),
-                  TSettingsMenuTile(icon: Iconsax.image,
+                  TSettingsMenuTile(
+                    icon: Iconsax.image,
                     title: 'Safe Mode',
                     subTitle: 'Set image quality to be seen',
-                    trailing: Switch(value:false, onChanged: (value){}),
+                    trailing: Switch(value: false, onChanged: (value) {}),
                   ),
+
                   /// Logout Button
-                  const SizedBox(height: TSizes.spaceBtwSections,),
-                  SizedBox(width: double.infinity, child:  OutlinedButton(onPressed: (){}, child: const Text('Logout')),),
-                  const SizedBox(height: TSizes.spaceBtwSections * 2.5,)
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                        onPressed: () {}, child: const Text('Logout')),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections * 2.5,
+                  )
                 ],
               ),
             )

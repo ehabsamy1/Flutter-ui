@@ -14,11 +14,9 @@ class TProductImageSlider extends StatelessWidget {
     super.key,
   });
 
-
-
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context) ;
+    final dark = THelperFunctions.isDarkMode(context);
     return TCurvedEdgesWidget(
       child: Container(
         color: dark ? TColors.darkerGrey : TColors.light,
@@ -30,8 +28,7 @@ class TProductImageSlider extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(TSizes.productImageRadius * 2),
                 child: Center(
-                    child: Image(
-                        image: AssetImage(TImages.productImage1))),
+                    child: Image(image: AssetImage(TImages.productImage1))),
               ),
             ),
 
@@ -59,10 +56,16 @@ class TProductImageSlider extends StatelessWidget {
                 ),
               ),
             ),
+
             /// Appbar Icons
             const TAppBar(
               showBackArrow: true,
-              action: [TCircularIcon(icon: Iconsax.heart5,color: Colors.red,)],
+              action: [
+                TCircularIcon(
+                  icon: Iconsax.heart5,
+                  color: Colors.red,
+                )
+              ],
             )
           ],
         ),

@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:readmore/readmore.dart';
+import 'package:storeapp/common/widgets/texts/section_heading.dart';
+import 'package:storeapp/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:storeapp/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:storeapp/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
+import 'package:storeapp/features/shop/screens/product_details/widgets/product_meta_data.dart';
+import 'package:storeapp/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:storeapp/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:storeapp/utils/constants/sizes.dart';
 import 'package:storeapp/utils/helpers/helper_functions.dart';
 
@@ -10,7 +18,8 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    return  Scaffold(
+    return Scaffold(
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -18,42 +27,76 @@ class ProductDetail extends StatelessWidget {
             const TProductImageSlider(),
 
             /// 2 product Details
-            Padding(padding: const EdgeInsets.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace , bottom: TSizes.defaultSpace),
-            child: Column(
-              children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                  right: TSizes.defaultSpace,
+                  left: TSizes.defaultSpace,
+                  bottom: TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  /// Rating & share
+                  const TRatingAndShare(),
 
-                /// Rating & share
-                Row(
-                  children: [
-                    /// Rating
+                  /// Price, Title, Stock , & Brand
+                  const TProductMetaData(),
+
+                  /// Attributes
+
+                  const TProductAttributes(),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+
+                  /// Checkout Button
+                  SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {}, child: const Text('Checkout'))),
+
+                  /// - Description
+                  const TSectionHeading(title: 'Description'),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  const ReadMoreText(
+                    'This is a product description for Blue Nike Sleeve less vest. There are more things that can be added but i am just product  ',
+                    trimLines: 1,
+                    trimMode: TrimMode.Line,
+                    trimCollapsedText: 'Show more',
+                    trimExpandedText: 'Less',
+                    moreStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    lessStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  ),
+
+                  /// Reviews
+                  const Divider(),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const  Icon(Iconsax.star5, color: Colors.amber, size: 24,),
-                      const SizedBox(width: TSizes.spaceBtwItems/ 2,),
-                      Text.rich(
-                        TextSpan(
-                            children: [
-                           TextSpan( text: '5.0' , style: Theme.of(context).textTheme.bodyLarge),
-                              const TextSpan(text: '(199)'),
-
-                              ]
+                      const TSectionHeading(
+                        title: 'Reviews(199)',
+                        showActionButton: false,
                       ),
-                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Iconsax.arrow_right_3,
+                          size: 18,
+                        ),
+                        onPressed: () =>
+                            Get.to(() => const ProductReviewsScreen()),
+                      )
                     ],
-
-                  )
-                    /// Share Button
-                  ],
-                )
-                /// Price, Title, Stock , & Brand
-
-                /// Attributes
-
-                /// Checkout Button
-
-                /// Reviews
-              ],
-            ),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+                ],
+              ),
             )
           ],
         ),
@@ -61,5 +104,3 @@ class ProductDetail extends StatelessWidget {
     );
   }
 }
-
-
