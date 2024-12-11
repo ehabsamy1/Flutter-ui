@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:storeapp/features/shop/screens/all_product/all_product.dart';
 import 'package:storeapp/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:storeapp/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:storeapp/features/shop/screens/home/widgets/promo_slider.dart';
@@ -80,11 +83,11 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   /// Heading
-                   TSectionHeading(title: 'Popular Products', onPressed: (){},),
+                   TSectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const AllProducts()),),
                   const SizedBox(height: TSizes.spaceBtwItems,),
 
                   /// Popular
-                  TGridLayout(itemCount: 2, itemBuilder:   (_, index) => const TProductCardVertical(),),
+                  TGridLayout(itemCount: 2, mainAxisExtent: 80,itemBuilder:   (_, index) => const TProductCardVertical(),),
                 ],
               ),
             ),

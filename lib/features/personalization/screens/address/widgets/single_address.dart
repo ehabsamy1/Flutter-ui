@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:storeapp/common/custom_shapes/containers/rounded_container.dart';
@@ -59,7 +58,10 @@ class TSingleAddress extends StatelessWidget {
               const SizedBox(
                 height: TSizes.sm / 2,
               ),
-              const Text('Egypt , cairo , Halwan ', softWrap: true,)
+              const Text(
+                'Egypt , cairo , Halwan ',
+                softWrap: true,
+              )
             ],
           ),
         ],

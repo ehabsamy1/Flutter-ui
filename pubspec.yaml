@@ -42,7 +42,7 @@ dependencies:
   meta: ^1.15.0
   path: ^1.9.0
   string_scanner: ^1.2.0
-
+  firebase_core: ^3.8.1
 
 
 dev_dependencies:
