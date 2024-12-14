@@ -19,7 +19,7 @@ dependencies:
   intl: ^0.19.0
   logger: ^2.0.1
   url_launcher: ^6.1.12
-  flutter_native_splash: ^2.4.0
+  flutter_native_splash: ^2.2.16
   smooth_page_indicator: ^1.1.0
   #Icons
 
@@ -28,7 +28,7 @@ dependencies:
   # state Management
   get: ^4.6.5
   get_storage: ^2.1.1
-
+  flutter_launcher_icons: ^0.14.2
   # product Specific
   readmore: ^3.0.0
   carousel_slider: ^5.0.0
@@ -58,7 +58,10 @@ dev_dependencies:
   test_api: ^0.7.2
   vm_service: ^14.2.5
 
-
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
 
 
   flutter_lints: ^3.0.1
