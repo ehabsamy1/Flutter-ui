@@ -43,6 +43,7 @@ dependencies:
   path: ^1.9.0
   string_scanner: ^1.2.0
   firebase_core: ^3.8.1
+  cloud_firestore: ^5.6.1
 
 
 dev_dependencies:
